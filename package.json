@@ -1,0 +1,23 @@
+{
+  "name": "resta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "16.13.2."
+  },
+  
+  "scripts": {
+    "my-app-install": "npm install --prefix my-app",
+    "server": "nodemon server.js",
+    "my-app": "npm start --prefix my-app",
+    "dev": "concurrently \"npm run server\" \"npm run my-app\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix my-app && npm run build --prefix my-app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },  "proxy": "http://localhost:8000/"
+}
